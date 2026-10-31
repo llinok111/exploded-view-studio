@@ -1,0 +1,13 @@
+{
+  "name": "exploded-view-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Constraint-solved exploded-view layouts for a 24-part assembly: 18 -> 0 AABB collisions at equal displacement",
+  "scripts": {
+    "gen": "node tools/gen-sample.mjs",
+    "verify": "node bench/verify.mjs",
+    "bench": "node bench/bench.mjs",
+    "serve": "python3 -m http.server 4173"
+  }
+}

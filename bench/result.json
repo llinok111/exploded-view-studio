@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-10-31T12:44:15.037Z",
+  "node": "v24.19.0",
+  "parts": 24,
+  "coldStartMs": 7.4854,
+  "samplesMs": [
+    0.1168,
+    0.1145,
+    0.0854,
+    0.0841,
+    0.0786,
+    0.0776,
+    0.0844,
+    0.0903,
+    0.0829,
+    0.0845,
+    0.0854,
+    0.0967,
+    0.084,
+    0.0826,
+    0.0798
+  ],
+  "minMs": 0.0776,
+  "medianMs": 0.0844,
+  "p95Ms": 0.1168,
+  "meanMs": 0.0885,
+  "stddevMs": 0.0115,
+  "relativeStddev": 0.1302,
+  "sampleCount": 15,
+  "callsPerSample": 100,
+  "metrics": {
+    "assembledCollisions": 18,
+    "solvedCollisions": 0,
+    "baselineCollisions": 18,
+    "solverIterations": 7,
+    "solverTotalDisplacement": 2.39074,
+    "solverMaxDisplacement": 0.62135,
+    "solverMinSeparation": 0.060021,
+    "baselineScale": 1.09348
+  }
+}
