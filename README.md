@@ -59,5 +59,5 @@ The baseline is deliberately not handicapped: it is the classic radial explode, 
 - Collision is AABB-only. Rotated parts use their axis-aligned extents, so the solver is conservative, not exact for oriented geometry.
 - All-pairs O(n²) with 24 parts; a 10k-part scene needs a broadphase (grid/BVH), which is out of scope here.
 - The 0.06 gap is a layout aesthetic, not a manufacturing tolerance.
-- Timing noise: relative stddev is 13.0%, above the 10% guideline. The first two samples (0.1168 and 0.1145 ms) carry residual V8/GC cost; the remaining 13 sit between 0.0776 and 0.0967 ms. Median 0.0844 vs min 0.0776 differ by 8.8%, so the quoted figure is the median, and the outlier is reported rather than hidden.
+- Timing noise: in the committed run (`bench/result.json`) the relative stddev is 13.0%, above the 10% guideline. The first two samples (0.1168 and 0.1145 ms) carry residual V8/GC cost; the remaining 13 sit between 0.0776 and 0.0967 ms. Median 0.0844 vs min 0.0776 differ by 8.8%, so the quoted figure is the median, and the outlier is reported rather than hidden.
 - Cold start (7.49 ms) is the first `analyze()` call in a fresh process; it is reported separately and never mixed into the median.
