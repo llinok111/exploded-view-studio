@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * bench/bench.mjs — cold start + 7 measured runs, median/p95/stddev.
+ * bench/bench.mjs — cold start + 15 measured samples, median/p95/stddev.
  * Writes bench/result.json; README quotes exactly these numbers.
  */
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -20,8 +20,8 @@ const coldStart = now();
 const coldReport = analyze(parts);
 const coldStartMs = now() - coldStart;
 
-// Warmup (discarded), then 9 measured samples. Each sample runs 25 full
-// pipeline passes and reports the per-pass cost: at ~0.7 ms/call a single
+// Warmup (discarded), then 15 measured samples. Each sample runs 100 full
+// pipeline passes and reports the per-pass cost: at ~0.08 ms/call a single
 // pass is dominated by timer granularity, which would make the numbers noisy
 // without making them more honest.
 const CALLS_PER_SAMPLE = 100;
